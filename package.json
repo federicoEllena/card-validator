@@ -21,6 +21,6 @@
     "jest": "^25.1.0"
   },
   "dependencies": {
-    "credit-card-type": "^8.3.0"
+    "credit-card-type": "https://github.com/federicoEllena/credit-card-type"
   }
 }
