@@ -27,6 +27,7 @@ function cardNumber(value, options) {
   if (potentialTypes.length === 0) {
     return verification(null, false, false);
   } else if (potentialTypes.length !== 1) {
+    console.log(`potentialTypes.length !== 1 ${potentialTypes.length}`)
     return verification(null, true, false);
   }
 
@@ -50,7 +51,7 @@ function cardNumber(value, options) {
   for (i = 0; i < cardType.lengths.length; i++) {
     if (cardType.lengths[i] === value.length) {
       isPotentiallyValid = value.length < maxLength || isValid;
-
+      console.log(`${isValid} - ${isPotentiallyValid}`)
       return verification(cardType, isPotentiallyValid, isValid);
     }
   }
