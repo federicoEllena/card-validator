@@ -28,10 +28,8 @@ function luhn10(identifier) {
   var i = identifier.length - 1;
   var num;
 
-  console.log(i);
   while (i >= 0) {
     num = parseInt(identifier.charAt(i), 10);
-    console.log(i);
 
     if (alt) {
       num *= 2;

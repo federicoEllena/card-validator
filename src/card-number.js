@@ -40,7 +40,6 @@ function cardNumber(value, options) {
     isValid = true;
   } else {
     isValid = luhn10(value);
-    console.log(`isValid: ${isValid}`)
   }
 
   maxLength = Math.max.apply(null, cardType.lengths);
@@ -51,6 +50,7 @@ function cardNumber(value, options) {
   for (i = 0; i < cardType.lengths.length; i++) {
     if (cardType.lengths[i] === value.length) {
       isPotentiallyValid = value.length < maxLength || isValid;
+
       return verification(cardType, isPotentiallyValid, isValid);
     }
   }
